@@ -2,22 +2,26 @@ package com.gunmer.droidlab.presentation.main.viewModel
 
 import android.databinding.BaseObservable
 import android.databinding.ObservableField
-import android.util.Log
+import com.gunmer.droidlab.presentation.common.Navigator
+import com.gunmer.droidlab.presentation.interfaceOriented.InterfaceOrientedActivity
 import com.gunmer.droidlab.presentation.main.adapter.FeatureTestAdapter
 
 class MainVM : BaseObservable() {
 
+    val navigator = Navigator()
+
     val featureTestAdapter = ObservableField<FeatureTestAdapter>()
 
     fun onCreate() {
-        val prueba1 = FeatureTestVM().apply {
-            name.set("Prueba 1")
+
+        val interfaceOriented = FeatureTestVM().apply {
+            name.set("Interface Oriented")
             action = {
-                Log.d("MainVM", "Action is executed")
+                navigator.navigateTo(InterfaceOrientedActivity::class.java)
             }
         }
 
-        val features = listOf(prueba1)
+        val features = listOf(interfaceOriented)
         featureTestAdapter.set(FeatureTestAdapter(features))
     }
 

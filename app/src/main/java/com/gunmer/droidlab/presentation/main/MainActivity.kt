@@ -14,7 +14,7 @@ class MainActivity : AppCompatActivity() {
 
         val binding = DataBindingUtil.setContentView<ActivityMainBinding>(this, R.layout.activity_main)
         binding.viewModel = MainVM()
-
+        binding.viewModel?.navigator?.context = this.applicationContext
         binding.viewModel?.onCreate()
     }
 
