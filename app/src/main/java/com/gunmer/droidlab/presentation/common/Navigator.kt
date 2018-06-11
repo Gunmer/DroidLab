@@ -1,15 +1,11 @@
 package com.gunmer.droidlab.presentation.common
 
 import android.app.Activity
-import android.content.Context
 import android.content.Intent
 
-class Navigator {
-    lateinit var context: Context
+interface Navigator {
 
-    fun <T : Activity> navigateTo(activityClass: Class<T>) {
-        val intent = Intent(context, activityClass)
-        context.startActivity(intent)
-    }
+    fun <T : Activity> navigateTo(activityClass: Class<T>)
+    fun navigateTo(startIntent: Intent)
 
 }

@@ -8,7 +8,7 @@ import com.gunmer.droidlab.presentation.main.adapter.FeatureTestAdapter
 
 class MainVM : BaseObservable() {
 
-    val navigator = Navigator()
+    lateinit var navigator: Navigator
 
     val featureTestAdapter = ObservableField<FeatureTestAdapter>()
 

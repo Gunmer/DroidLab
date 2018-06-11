@@ -4,6 +4,7 @@
     package="com.gunmer.droidlab">
 
     <application
+        android:name=".infrastructure.App"
         android:allowBackup="true"
         android:fullBackupContent="false"
         android:icon="@mipmap/ic_launcher"
