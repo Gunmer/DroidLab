@@ -1,3 +1,4 @@
 <resources>
     <string name="app_name">DroidLab</string>
+    <string name="button_generated_text">Generar texto</string>
 </resources>
